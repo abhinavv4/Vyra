@@ -1,0 +1,55 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-ink: 23 18 15;
+  --color-sand: 248 242 234;
+  --color-cream: 255 250 244;
+  --color-mist: 227 216 202;
+  --color-umber: 158 118 82;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background: radial-gradient(circle at 20% 0%, #fff6ea 0%, #f6ede2 35%, #e9dccb 100%);
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  letter-spacing: 0.02em;
+}
+
+@layer components {
+  .section {
+    @apply px-6 sm:px-10 lg:px-16;
+  }
+
+  .section-block {
+    @apply py-20 sm:py-24;
+  }
+
+  .eyebrow {
+    @apply text-xs uppercase tracking-[0.4em] text-ink/60;
+  }
+
+  .glass {
+    @apply rounded-3xl border border-white/30 bg-white/40 backdrop-blur-xl;
+  }
+
+  .button-primary {
+    @apply rounded-full bg-ink px-6 py-3 text-xs uppercase tracking-[0.3em] text-sand transition hover:-translate-y-0.5;
+  }
+
+  .button-outline {
+    @apply rounded-full border border-ink/20 px-6 py-3 text-xs uppercase tracking-[0.3em] text-ink/70 transition hover:border-ink/40 hover:text-ink;
+  }
+}
